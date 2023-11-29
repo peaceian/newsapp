@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTS DailyNews</title>
+</head>
+<body>
+    <h2>公視新聞 即時新聞</h2>
+    <table>
+        <th width="150">時間</th>
+        <!-- <th width="50">分類</th> -->
+        <th width="500">標題</th>
+        <th width="100">網址</th>
+
+        {% for date_list,title_list,link_list in all %}
+        
+        <tr>
+            <td>{{date_list}}</td>
+            <!-- <td>{{cate_list}}</td> -->
+            <td><a href="{{link_list}}" target="_blank">{{title_list}}</a></td> <!--title bind link-->
+            <td>{{link_list}}</td>
+        </tr>
+        
+        {% endfor %}
+    </table>
+</body>
+</html>
